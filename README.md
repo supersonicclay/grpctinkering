@@ -5,8 +5,8 @@
 ### Clone repo
 
 ```
-git clone https://github.com/supersonicclay/gotinkering.git ~/go/src/supersonicclay/gotinkering
-cd ~/go/src/supersonicclay/gotinkering
+git clone https://github.com/supersonicclay/grpctinkering.git ~/go/src/supersonicclay/grpctinkering
+cd ~/go/src/supersonicclay/grpctinkering
 ```
 
 ### Run Server (Go)
