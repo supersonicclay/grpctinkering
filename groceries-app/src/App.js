@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { Empty, GroceryItems } from './grpc/groceries_pb.js';
+import { Empty } from './grpc/groceries_pb.js';
 import { GroceriesClient } from './grpc/groceries_grpc_web_pb.js';
 
 const client = new GroceriesClient('http://localhost:50099');
@@ -16,8 +16,10 @@ function App() {
     client.getAll(request, {}, function (err, response) {
       console.log(err);
       console.log(response);
-      console.log(response.getMessage());
-      setStuff(response.getMessage());
+      if (!err) {
+        console.log(response.getMessage());
+        setStuff(response.getMessage());
+      }
     });
   }
 

@@ -6,3 +6,17 @@ services:
       - "50099:50099"
     volumes:
       - ./envoy.yaml:/etc/envoy/envoy.yaml
+  web:
+    image: node:10
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./groceries-app:/app"
+      - "/tmp/grpctinkering/node_modules_cache:/app/node_modules"
+    working_dir: "/app"
+    command: yarn start
+    # Do this instead when there are dependency changes or on first run
+    # command: yarn install
+    tty: true
