@@ -26,7 +26,7 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/supersonicclay/gotinkering/groceries"
+	pb "github.com/supersonicclay/grpctinkering/groceries"
 	"google.golang.org/grpc"
 )
 
