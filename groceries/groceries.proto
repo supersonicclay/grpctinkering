@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package groceries;
+
+service Groceries {
+  // Returns all grocery list items
+  rpc GetAll (Empty) returns (GroceryItems) {}
+}
+
+message Empty {}
+
+message GroceryItems {
+  string message = 1;
+}
