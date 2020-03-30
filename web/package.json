@@ -1,0 +1,15 @@
+{
+  "name": "groceries-web",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "google-protobuf": "^3.11.4",
+    "grpc-web": "^1.0.7"
+  }
+}
