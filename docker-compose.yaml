@@ -20,3 +20,14 @@ services:
     # Do this instead when there are dependency changes or on first run
     # command: yarn install
     tty: true
+
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile-server
+    expose:
+      - "50042"
+    ports:
+      - "50042:50042"
+    tty: true
+    stdin_open: true

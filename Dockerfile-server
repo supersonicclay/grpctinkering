@@ -1,0 +1,11 @@
+FROM golang
+
+WORKDIR /go/src/app
+
+COPY ./server ./server
+COPY ./groceries ./groceries
+
+RUN go get -d -v ./...
+RUN go install -v ./...
+
+CMD server
